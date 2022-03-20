@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 app.use('/user', userRoute)
 
-app.get('/', (req, res) => { res.send('folio_server_online >_') })
+app.get('/', (req, res) => { res.send('folio_server_online >') })
 app.get('/favicon.ico', (req, res) => { res.send('/favicon.ico'); })
 
 app.listen(port, () => { console.log('server listening on port >_', port) })
