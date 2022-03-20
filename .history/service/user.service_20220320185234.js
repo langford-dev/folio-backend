@@ -31,8 +31,6 @@ module.exports = {
 
         try {
 
-            console.log("upadte >> ", req.body)
-
             const [status, message] = await USER_REPO.UPDATE_USER(req.body)
 
             if (!status) return res.json({ status, error: message })

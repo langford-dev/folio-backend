@@ -33,11 +33,11 @@ module.exports = {
 
             console.log("upadte >> ", req.body)
 
-            const [status, message] = await USER_REPO.UPDATE_USER(req.body)
+            // const [status, message] = await USER_REPO.UPDATE_USER(req.body)
 
-            if (!status) return res.json({ status, error: message })
+            // if (!status) return res.json({ status, error: message })
 
-            return res.status(200).json({ status, message })
+            // return res.status(200).json({ status, message })
         }
 
         catch (e) {

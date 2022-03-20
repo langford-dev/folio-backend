@@ -6,7 +6,7 @@ const formatUsername = (name) => {
 
 module.exports = {
 
-    addUser: async function (req, res) {
+    createAccount: async function (req, res) {
 
         try {
 
@@ -30,8 +30,6 @@ module.exports = {
     updateUser: async function (req, res) {
 
         try {
-
-            console.log("upadte >> ", req.body)
 
             const [status, message] = await USER_REPO.UPDATE_USER(req.body)
 

@@ -6,6 +6,8 @@ module.exports = {
 
         try {
 
+            console.log("payload", payload)
+
             const [_status, userExists] = await this.CHECK_USERNAME_EXISTS(payload.username)
 
             if (!_status || userExists) return [false, "User with username already exists"]

@@ -10,6 +10,8 @@ module.exports = {
 
         try {
 
+            console.log("body >>> ", req.body)
+
             let { username } = req.body
 
             req.body.username = formatUsername(username)
@@ -30,8 +32,6 @@ module.exports = {
     updateUser: async function (req, res) {
 
         try {
-
-            console.log("upadte >> ", req.body)
 
             const [status, message] = await USER_REPO.UPDATE_USER(req.body)
 

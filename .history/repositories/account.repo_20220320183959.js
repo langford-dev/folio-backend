@@ -2,7 +2,7 @@ const User = require('../models/user.model')
 
 module.exports = {
 
-    ADD_USER: async function (payload) {
+    CREATE_ACCOUNT: async function (payload) {
 
         try {
 
@@ -13,42 +13,6 @@ module.exports = {
             await new User(payload).save()
 
             return [true, "User added successfully"]
-        }
-
-        catch (e) {
-
-            return [false, e.message]
-        }
-    },
-
-    UPDATE_USER: async function (payload) {
-
-        try {
-
-            const { username } = payload
-
-            await User.findOneAndUpdate({ username }, payload)
-
-            return [true, "User updated successfully"]
-        }
-
-        catch (e) {
-
-            return [false, e.message]
-        }
-    },
-
-    GET_USER: async function (username) {
-
-        try {
-
-            console.log("username >> ", username)
-
-            let user = await User.findOne({ username })
-
-            if (!user) return [false, "User not found"]
-
-            return [true, user]
         }
 
         catch (e) {

@@ -16,7 +16,7 @@ const User = mongoose.model('User', Schema({
         // required: [true, 'Password is required']
     },
 
-    isPremiumAccount: {
+    isPremium: {
         type: Boolean,
         default: false,
         // required: [true, 'ID is required']

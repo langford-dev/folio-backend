@@ -42,7 +42,7 @@ module.exports = {
 
         try {
 
-            console.log("username >> ", username)
+            consolee.log("username >> ", username)
 
             let user = await User.findOne({ username })
 

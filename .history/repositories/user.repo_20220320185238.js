@@ -6,11 +6,13 @@ module.exports = {
 
         try {
 
-            const [_status, userExists] = await this.CHECK_USERNAME_EXISTS(payload.username)
+            // console.log("payload >> ", payload)
 
-            if (!_status || userExists) return [false, "User with username already exists"]
+            // const [_status, userExists] = await this.CHECK_USERNAME_EXISTS(payload.username)
 
-            await new User(payload).save()
+            // if (!_status || userExists) return [false, "User with username already exists"]
+
+            // await new User(payload).save()
 
             return [true, "User added successfully"]
         }

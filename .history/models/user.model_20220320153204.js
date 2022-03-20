@@ -7,67 +7,55 @@ const User = mongoose.model('User', Schema({
     id: {
         type: String,
         default: uuid.v4,
-        // required: [true, 'ID is required']
+        required: [true, 'ID is required']
     },
 
-    password: {
-        type: String,
-        default: "",
-        // required: [true, 'Password is required']
-    },
-
-    isPremiumAccount: {
+    isPremium: {
         type: Boolean,
         default: false,
-        // required: [true, 'ID is required']
+        required: [true, 'ID is required']
     },
 
     profilePhoto: {
         type: String,
         default: '',
-        // required: [true, 'Profile photo is required']
+        required: [true, 'Profile photo is required']
     },
 
     coverPhoto: {
         type: String,
         default: '',
-        // required: [true, 'Cover photo is required']
-    },
-
-    showGithubStats: {
-        type: Boolean,
-        default: false,
-        // required: [true, 'ShowGithubStats flag required']
+        required: [true, 'Cover photo is required']
     },
 
     fullname: {
         type: String,
         default: '',
-        // required: [true, 'Name is required']
+        required: [true, 'Name is required']
     },
 
     username: {
         type: String,
         default: '',
-        // required: [true, 'Username is required']
+        required: [true, 'Username is required']
     },
 
     socials: {
         type: Object,
         default: { twitter: "", facebook: "", linkedin: "", instagram: "", github: "", coffee: "" },
-        // required: [true, 'Usernames are required']
+        required: [true, 'Usernames are required']
     },
 
     work: {
         type: String,
         default: '',
-        // required: [true, 'Work is required']
+        required: [true, 'Work is required']
     },
 
     about: {
         type: String,
-        default: 'Hello 👋 i just created my Folio profile',
-        // required: [true, 'About is required']
+        default: 'Hello ',
+        required: [true, 'About is required']
     },
 
     createdAt: {
@@ -83,19 +71,19 @@ const User = mongoose.model('User', Schema({
     workplaces: {
         type: Array,
         default: [],
-        // required: [true, 'Workplaces is required']
+        required: [true, 'Workplaces is required']
     },
 
     skills: {
         type: Array,
         default: [],
-        // required: [true, 'Skills are required']
+        required: [true, 'Skills are required']
     },
 
     projects: {
         type: Array,
         default: [],
-        // required: [true, 'Projects are required']
+        required: [true, 'Projects are required']
     },
 }));
 
