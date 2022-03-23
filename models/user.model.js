@@ -34,6 +34,12 @@ const User = mongoose.model('User', Schema({
         // required: [true, 'Cover photo is required']
     },
 
+    theme: {
+        type: Number,
+        default: 0,
+        // required: [true, 'Cover photo is required']
+    },
+
     showGithubStats: {
         type: Boolean,
         default: false,
