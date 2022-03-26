@@ -34,6 +34,12 @@ const User = mongoose.model('User', Schema({
         // required: [true, 'Cover photo is required']
     },
 
+    themeColor: {
+        type: String,
+        default: "#ffffff",
+        // required: [true, 'Cover photo is required']
+    },
+
     theme: {
         type: Number,
         default: 0,
