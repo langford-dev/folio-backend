@@ -42,7 +42,7 @@ const User = mongoose.model('User', Schema({
 
     theme: {
         type: Number,
-        default: 0,
+        default: 1,
         // required: [true, 'Cover photo is required']
     },
 
