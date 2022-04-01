@@ -66,11 +66,17 @@ const User = mongoose.model('User', Schema({
 
     socials: {
         type: Object,
-        default: { twitter: "", dev: "", dailydev: "", hsahnode: "", linkedin: "", stackoverflow: "", youtube: "", dribbble: "", twitch: "", discord: "", behance: "", instagram: "", github: "", coffee: "" },
+        default: { twitter: "", dev: "", dailydev: "", hashnode: "", linkedin: "", stackoverflow: "", youtube: "", dribbble: "", twitch: "", discord: "", behance: "", instagram: "", github: "", coffee: "" },
         // required: [true, 'Usernames are required']
     },
 
     work: {
+        type: String,
+        default: '',
+        // required: [true, 'Work is required']
+    },
+    
+    tagline: {
         type: String,
         default: '',
         // required: [true, 'Work is required']
