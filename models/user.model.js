@@ -76,6 +76,12 @@ const User = mongoose.model('User', Schema({
         // required: [true, 'Work is required']
     },
 
+    views: {
+        type: Number,
+        default: 0,
+        // required: [true, 'Work is required']
+    },
+
     tagline: {
         type: String,
         default: 'Hello world! 👋',
