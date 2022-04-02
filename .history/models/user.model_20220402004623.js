@@ -78,7 +78,7 @@ const User = mongoose.model('User', Schema({
 
     tagline: {
         type: String,
-        default: 'Hello world! 👋',
+        default: 'Hello, I am a new user',
         // required: [true, 'Work is required']
     },
 

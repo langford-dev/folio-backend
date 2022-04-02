@@ -75,10 +75,10 @@ const User = mongoose.model('User', Schema({
         default: '',
         // required: [true, 'Work is required']
     },
-
+    
     tagline: {
         type: String,
-        default: 'Hello world! 👋',
+        default: '',
         // required: [true, 'Work is required']
     },
 

@@ -6,6 +6,8 @@
 # Node artifact files
 node_modules/
 dist/
+.history/
+.history
 
 # Compiled Java class files
 *.class
@@ -16,6 +18,8 @@ dist/
 # Log files
 *.log
 logs/
+.history/
+.history
 
 # Package files
 *.jar
@@ -23,6 +27,8 @@ logs/
 # Maven
 target/
 dist/
+.history/
+.history
 
 # JetBrains IDE
 .idea/
