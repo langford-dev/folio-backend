@@ -62,6 +62,22 @@ module.exports = {
             return res.json({ status: false, error: e.message })
         }
     },
+    getUserByUsername: async function (req, res) {
+
+        try {
+
+            const [status, payload] = await USER_REPO.GET_USER_BY_USERNAME(req.params.username)
+
+            if (!status) return res.json({ status, error: payload })
+
+            return res.status(200).json({ status, payload })
+        }
+
+        catch (e) {
+
+            return res.json({ status: false, error: e.message })
+        }
+    },
 
     checkUsernameExists: async function (req, res) {
 

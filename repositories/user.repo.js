@@ -59,6 +59,27 @@ module.exports = {
         }
     },
 
+    GET_USER_BY_USERNAME: async function (username) {
+
+        try {
+
+            console.log("username >> ", username)
+
+            let user = await User.findOne({ username })
+
+            console.log("🚗 ", user)
+
+            if (!user) return [false, "User not found"]
+
+            return [true, user]
+        }
+
+        catch (e) {
+
+            return [false, e.message]
+        }
+    },
+
     CHECK_USERNAME_EXISTS: async function (username) {
 
         try {
