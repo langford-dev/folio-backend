@@ -4,7 +4,7 @@ const userService = require('../service/user.service')
 
 router.post('/add-user', userService.addUser)
 router.post('/update-user', userService.updateUser)
-router.get('/get-user/:username', userService.getUser)
+router.get('/get-user/:email', userService.getUser)
 router.get('/check-username-exists/:username', userService.checkUsernameExists)
 
 module.exports = router

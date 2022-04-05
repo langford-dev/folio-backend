@@ -38,13 +38,15 @@ module.exports = {
         }
     },
 
-    GET_USER: async function (username) {
+    GET_USER: async function (email) {
 
         try {
 
-            console.log("username >> ", username)
+            console.log("email >> ", email)
 
-            let user = await User.findOne({ username })
+            let user = await User.findOne({ email })
+
+            console.log("🚗 ", user)
 
             if (!user) return [false, "User not found"]
 

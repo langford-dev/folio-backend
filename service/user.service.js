@@ -50,7 +50,7 @@ module.exports = {
 
         try {
 
-            const [status, payload] = await USER_REPO.GET_USER(req.params.username)
+            const [status, payload] = await USER_REPO.GET_USER(req.params.email)
 
             if (!status) return res.json({ status, error: payload })
 
