@@ -10,12 +10,6 @@ const User = mongoose.model('User', Schema({
         // required: [true, 'ID is required']
     },
 
-    password: {
-        type: String,
-        default: "",
-        // required: [true, 'Password is required']
-    },
-
     isPremiumAccount: {
         type: Boolean,
         default: false,
@@ -30,7 +24,7 @@ const User = mongoose.model('User', Schema({
 
     coverPhoto: {
         type: String,
-        default: '',
+        default: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80',
         // required: [true, 'Cover photo is required']
     },
 
@@ -53,6 +47,12 @@ const User = mongoose.model('User', Schema({
     },
 
     fullname: {
+        type: String,
+        default: '',
+        // required: [true, 'Name is required']
+    },
+
+    email: {
         type: String,
         default: '',
         // required: [true, 'Name is required']
