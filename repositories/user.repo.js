@@ -27,6 +27,8 @@ module.exports = {
 
             const { email } = payload
 
+            console.log("updating, ", email)
+
             await User.findOneAndUpdate({ email }, payload)
 
             return [true, "User updated successfully"]
@@ -46,7 +48,7 @@ module.exports = {
 
             let user = await User.findOne({ email })
 
-            console.log("🚗 ", user)
+            console.log("get user ", user)
 
             if (!user) return [false, "User not found"]
 
