@@ -25,9 +25,9 @@ module.exports = {
 
         try {
 
-            const { username } = payload
+            const { email } = payload
 
-            await User.findOneAndUpdate({ username }, payload)
+            await User.findOneAndUpdate({ email }, payload)
 
             return [true, "User updated successfully"]
         }
