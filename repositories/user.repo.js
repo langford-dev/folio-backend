@@ -27,8 +27,6 @@ module.exports = {
 
             const { email } = payload
 
-            console.log("updating, ", email)
-
             await User.findOneAndUpdate({ email }, payload)
 
             return [true, "User updated successfully"]
@@ -44,11 +42,9 @@ module.exports = {
 
         try {
 
-            console.log("email >> ", email)
+            console.log("finding >> ", email)
 
             let user = await User.findOne({ email })
-
-            console.log("get user ", user)
 
             if (!user) return [false, "User not found"]
 
@@ -61,11 +57,26 @@ module.exports = {
         }
     },
 
-    GET_USER_BY_USERNAME: async function (username) {
+    GET_ALL_USERS: async function () {
 
         try {
 
-            console.log("username >> ", username)
+            let users = await User.find({})
+
+            if (!users) return [false, "No users found"]
+
+            return [true, users]
+        }
+
+        catch (e) {
+
+            return [false, e.message]
+        }
+    },
+
+    GET_USER_BY_USERNAME: async function (username) {
+
+        try {
 
             let user = await User.findOne({ username })
 
