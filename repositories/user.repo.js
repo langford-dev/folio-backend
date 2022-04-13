@@ -42,8 +42,6 @@ module.exports = {
 
         try {
 
-            console.log("finding >> ", email)
-
             let user = await User.findOne({ email })
 
             if (!user) return [false, "User not found"]
