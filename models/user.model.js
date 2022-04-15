@@ -104,7 +104,7 @@ const User = mongoose.model('User', Schema({
 
     about: {
         type: String,
-        default: 'Hello 👋 i just created my Folio profile',
+        default: 'Heyooo i just created my follio profile',
     },
 
     createdAt: {
