@@ -21,7 +21,7 @@ const User = mongoose.model('User', Schema({
 
     profilePhoto: {
         type: String,
-        default: '',
+        default: 'https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png',
     },
 
     coverPhoto: {
@@ -29,22 +29,27 @@ const User = mongoose.model('User', Schema({
         default: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80',
     },
 
-    isGradient: {
-        type: Boolean,
-        default: false,
-    },
+    // isGradient: {
+    //     type: Boolean,
+    //     default: false,
+    // },
 
-    gradient: {
-        type: Object,
-        default: {
-            'from': "#07B5D4",
-            'from': "#3884F4",
-        }
-    },
+    // gradient: {
+    //     type: Object,
+    //     default: {
+    //         'from': "#07B5D4",
+    //         'to': "#3884F4",
+    //     }
+    // },
 
     themeColor: {
         type: String,
         default: "#ffffff",
+    },
+
+    accentColor: {
+        type: String,
+        default: "#fea82f",
     },
 
     theme: {
@@ -79,7 +84,7 @@ const User = mongoose.model('User', Schema({
 
     work: {
         type: String,
-        default: '',
+        default: 'Internet user',
     },
 
     views: {
@@ -94,7 +99,7 @@ const User = mongoose.model('User', Schema({
 
     tagline: {
         type: String,
-        default: 'Hello world! 👋',
+        default: 'Hello world, I love follio 💛💛💛',
     },
 
     about: {
