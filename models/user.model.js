@@ -52,6 +52,21 @@ const User = mongoose.model('User', Schema({
         default: "#fea82f",
     },
 
+    featuredVideo: {
+        type: String,
+        default: "",
+    },
+
+    logo: {
+        type: String,
+        default: "",
+    },
+
+    loader: {
+        type: String,
+        default: "",
+    },
+
     theme: {
         type: Number,
         default: 1,
